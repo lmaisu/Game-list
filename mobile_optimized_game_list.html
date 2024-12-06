@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>PlayStation Game List</title>
+    <style>
+        body {
+            font-family: 'Agrandir Grand', Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            margin: 0;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 16px;
+            outline: none;
+        }
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .note {
+            font-family: 'Agrandir Grand', Arial, sans-serif;
+            color: #ffb800;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PlayStation Game List</h1>
+    <p class="note">Before visiting or booking, please confirm game availability.</p>
+    <input type="text" id="searchBar" placeholder="Search for a game..." onkeyup="searchGames()">
+    <table id="gameTable">
+        <tr><td>Call Of Duty: Black Ops 4</td></tr><tr><td>Call Of Duty®: Black Ops III</td></tr><tr><td>FC 24</td></tr><tr><td>FC 25</td></tr><tr><td>Fifa 23</td></tr><tr><td>Mk 11</td></tr><tr><td>Mk Xl</td></tr><tr><td>Tekken 7</td></tr><tr><td>Tekken 8</td></tr><tr><td>UFC 4</td></tr><tr><td>UFC 5</td></tr><tr><td> NBA 2K24</td></tr><tr><td> NBA 2K25</td></tr><tr><td>Apex Legends</td></tr><tr><td>Assassin'S Creed Valhala </td></tr><tr><td>Assetto Corsa Competizione</td></tr><tr><td>Batman Arkham Knight</td></tr><tr><td>Battlefield 1</td></tr><tr><td>Black Ops Iii Zombies 1 Map</td></tr><tr><td>Bloodborne™</td></tr><tr><td>Brawhalla</td></tr><tr><td>Brawlhalla</td></tr><tr><td>Crash Bandicoot™ N. Sane Trilogy</td></tr><tr><td>Days Gone</td></tr><tr><td>Demon'S Souls</td></tr><tr><td>Detroid Become Human</td></tr><tr><td>Disney•Pixar Toy Story 3</td></tr><tr><td>Doom Eternal</td></tr><tr><td>Fall Guys</td></tr><tr><td>Fallout 4</td></tr><tr><td>Far Cry 6</td></tr><tr><td>Fast And Forious</td></tr><tr><td>For Honor</td></tr><tr><td>Fortnite</td></tr><tr><td>Ghost Of Tsushima</td></tr><tr><td>Ghostwire: Tokyo</td></tr><tr><td>Gran Turismo 7</td></tr><tr><td>Grand Turismo 7</td></tr><tr><td>Gta V</td></tr><tr><td>Hello Neighbor</td></tr><tr><td>Hitman</td></tr><tr><td>Kena: Bridge Of Spirits</td></tr><tr><td>Knack</td></tr><tr><td>Mk 11 -All</td></tr><tr><td>Monster Hunter</td></tr><tr><td>Mortal Kombat 1</td></tr><tr><td>Mortal Kombat Xl</td></tr><tr><td>Need For Speed Unbound </td></tr><tr><td>Overwatch 2</td></tr><tr><td>Pes 21 !Patch!</td></tr><tr><td>Rachet And Clank</td></tr><tr><td>Ratchet & Clank: Rift Apart</td></tr><tr><td>Red Dead Redeption</td></tr><tr><td>Resident Evil 2</td></tr><tr><td>Resident Evil 4</td></tr><tr><td>Resident Evil 7</td></tr><tr><td>Resident Evil 7 Biohazard</td></tr><tr><td>Rocket League</td></tr><tr><td>Sackboy™: A Big Adventure</td></tr><tr><td>Savege Planet </td></tr><tr><td>Second Son</td></tr><tr><td>Sims 4 </td></tr><tr><td>Skyrim</td></tr><tr><td>Sniper Elite 5</td></tr><tr><td>Sniper Elite 5 </td></tr><tr><td>Spider-Man</td></tr><tr><td>Spider-Man</td></tr><tr><td>Spider-Man: Miles Morales</td></tr><tr><td>Stray</td></tr><tr><td>Tchia</td></tr><tr><td>Tennis</td></tr><tr><td>The Last Of Us Part 2</td></tr><tr><td>The Last Of Us Part Ii</td></tr><tr><td>Toy Story</td></tr><tr><td>Twisted Metal</td></tr><tr><td>Twisted Metal World Tour </td></tr><tr><td>Uncharted</td></tr><tr><td>Uncharted™: Legacy Of Thieves</td></tr><tr><td>Until Dawn</td></tr><tr><td>Watch Dogs  2</td></tr>
+    </table>
+    <script>
+        function searchGames() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            const rows = document.querySelectorAll('#gameTable tr');
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(input) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
