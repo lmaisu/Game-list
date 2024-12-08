@@ -30,38 +30,14 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(50px); /* Start below */
+            animation: riseAnimation 0.7s ease-out forwards;
         }
         td {
             padding: 8px;
             text-align: left;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0; /* Start hidden */
-            transform: translateY(30px); /* Start below */
-            animation: riseFromBelow 0.5s ease-out forwards;
-        }
-        tr:nth-child(1) td {
-            animation-delay: 0.3s;
-        }
-        tr:nth-child(2) td {
-            animation-delay: 0.4s;
-        }
-        tr:nth-child(3) td {
-            animation-delay: 0.5s;
-        }
-        tr:nth-child(4) td {
-            animation-delay: 0.6s;
-        }
-        tr:nth-child(5) td {
-            animation-delay: 0.7s;
-        }
-        tr:nth-child(6) td {
-            animation-delay: 0.8s;
-        }
-        tr:nth-child(7) td {
-            animation-delay: 0.9s;
-        }
-        tr:nth-child(8) td {
-            animation-delay: 1s;
         }
         tr:last-child td {
             border-bottom: none;
@@ -73,15 +49,15 @@
             margin-bottom: 20px;
         }
 
-        /* Keyframes for the rise-from-below animation */
-        @keyframes riseFromBelow {
+        /* Keyframes for rise animation */
+        @keyframes riseAnimation {
             0% {
                 opacity: 0;
-                transform: translateY(30px); /* Start from below */
+                transform: translateY(50px); /* Start position */
             }
             100% {
                 opacity: 1;
-                transform: translateY(0); /* End at normal position */
+                transform: translateY(0); /* End position */
             }
         }
     </style>
@@ -104,6 +80,69 @@
         <tr><td>UFC 5</td></tr>
         <tr><td>NBA 2K24</td></tr>
         <tr><td>NBA 2K25</td></tr>
+        <tr><td>Apex Legends</td></tr>
+        <tr><td>Assassin'S Creed Valhala </td></tr>
+        <tr><td>Assetto Corsa Competizione</td></tr>
+        <tr><td>Batman Arkham Knight</td></tr>
+        <tr><td>Battlefield 1</td></tr>
+        <tr><td>Black Ops III Zombies 1 Map</td></tr>
+        <tr><td>Bloodborne™</td></tr>
+        <tr><td>Brawlhalla</td></tr>
+        <tr><td>Crash Bandicoot™ N. Sane Trilogy</td></tr>
+        <tr><td>Days Gone</td></tr>
+        <tr><td>Demon'S Souls</td></tr>
+        <tr><td>Detroid Become Human</td></tr>
+        <tr><td>Disney•Pixar Toy Story 3</td></tr>
+        <tr><td>Doom Eternal</td></tr>
+        <tr><td>Fall Guys</td></tr>
+        <tr><td>Fallout 4</td></tr>
+        <tr><td>Far Cry 6</td></tr>
+        <tr><td>Fast And Forious</td></tr>
+        <tr><td>For Honor</td></tr>
+        <tr><td>Fortnite</td></tr>
+        <tr><td>Ghost Of Tsushima</td></tr>
+        <tr><td>Ghostwire: Tokyo</td></tr>
+        <tr><td>Gran Turismo 7</td></tr>
+        <tr><td>Gta V</td></tr>
+        <tr><td>Hello Neighbor</td></tr>
+        <tr><td>Hitman</td></tr>
+        <tr><td>Kena: Bridge Of Spirits</td></tr>
+        <tr><td>Knack</td></tr>
+        <tr><td>Mk 11 All</td></tr>
+        <tr><td>Monster Hunter</td></tr>
+        <tr><td>Mortal Kombat 1</td></tr>
+        <tr><td>Mortal Kombat Xl</td></tr>
+        <tr><td>Need For Speed Unbound </td></tr>
+        <tr><td>Overwatch 2</td></tr>
+        <tr><td>Pes 21 !Patch!</td></tr>
+        <tr><td>Rachet And Clank</td></tr>
+        <tr><td>Ratchet & Clank: Rift Apart</td></tr>
+        <tr><td>Red Dead Redeption</td></tr>
+        <tr><td>Resident Evil 2</td></tr>
+        <tr><td>Resident Evil 4</td></tr>
+        <tr><td>Resident Evil 7</td></tr>
+        <tr><td>Resident Evil 7 Biohazard</td></tr>
+        <tr><td>Rocket League</td></tr>
+        <tr><td>Sackboy™: A Big Adventure</td></tr>
+        <tr><td>Savege Planet </td></tr>
+        <tr><td>Second Son</td></tr>
+        <tr><td>Sims 4 </td></tr>
+        <tr><td>Skyrim</td></tr>
+        <tr><td>Sniper Elite 5</td></tr>
+        <tr><td>Sniper Elite 5 </td></tr>
+        <tr><td>Spider-Man</td></tr>
+        <tr><td>Spider-Man: Miles Morales</td></tr>
+        <tr><td>Stray</td></tr>
+        <tr><td>Tchia</td></tr>
+        <tr><td>Tennis</td></tr>
+        <tr><td>The Last Of Us Part II</td></tr>
+        <tr><td>Toy Story</td></tr>
+        <tr><td>Twisted Metal</td></tr>
+        <tr><td>Twisted Metal World Tour </td></tr>
+        <tr><td>Uncharted</td></tr>
+        <tr><td>Uncharted™: Legacy Of Thieves</td></tr>
+        <tr><td>Until Dawn</td></tr>
+        <tr><td>Watch Dogs  2</td></tr>
     </table>
     <script>
         function searchGames() {
